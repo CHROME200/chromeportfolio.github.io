@@ -1,0 +1,375 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Nav Bar*/
+.titels{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: -95px;
+}
+/*.tit{
+    overflow: hidden;
+    font-style: italic;
+    top: 0;
+    color: white;
+    margin-top: 130px;
+    margin-left: -500px;
+    text-align: start;
+    font-size: 25px;
+}*/
+nav{
+    display: flex;
+    align-items: center;
+    color: aqua;
+}
+.ts{
+    flex: 3;
+    margin-top: 150px;
+    position: relative;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.ts li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.ts li a{
+    text-align: center;
+    font-size: 24px;
+    color: wheat;
+    display: block;
+    text-decoration: none;
+}
+.ts li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.ts li:hover::after{
+    width: 100%;
+}
+
+
+/*Header*/
+html{
+    scroll-behavior: smooth;
+}
+#header{
+    background: linear-gradient(rgb(16, 18, 10) , rgb(19, 23, 5));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 140vh;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pri{
+    color: white;
+    font-family: 'Andika', sans-serif;
+    text-align: center;
+}
+.first{
+    display: block;
+    margin-bottom: 20px;
+    font-size: 38px;
+}
+.btn{
+    width: 300px;
+    height: 50px;
+    border: 1px solid #3498db;
+    background: none;
+    text-align: center;
+    padding: 2px 0px;
+    font-size: 30px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+.btn2{
+    color: white;
+}
+.btn2:hover{
+    color: #1f6695;
+}
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #ffffff;
+    z-index: -1;
+    transition: 0.8s;
+}
+.btn2::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+.btn2:hover::before{
+    height: 180%;
+}
+
+/*Content*/
+#bod{
+    height: 150vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.ab{
+    font-size: 50px;
+    margin-left: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+.line{
+    height: 1px;
+    background-color: rgb(86, 86, 86);
+    border: rgb(86, 86, 86) solid 1px;
+    width: 70%;
+    margin: auto;
+}
+
+/*Porsantaje*/
+.wrapper{
+    margin-left: 30px;
+    margin-top: 80px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.wrapper .card{
+    background: #fff;
+    width: calc(33% - 20px);
+    height: 300px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper .card .circle{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.card .circle .box{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: all 0.2s;
+}
+.card .circle:hover .box{
+    transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.circle .box span{
+    font-size: 38px;
+    font-family: sans-serif;
+    font-weight: 600;
+    transform: translate(-45%, -45%);
+    transition: all 0.1s;
+}
+.card .circle:hover .box span{
+    transform: translate(-45%, -45%) scale(1.09);
+}
+.card .text{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Balsamiq Sans', cursive;
+}
+@media(max-width: 753px){
+.wrapper{
+  max-width: 700px;
+}
+.wrapper .card{
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+}
+@media(max-width: 505px){
+.wrapper{
+  max-width: 600px;
+}
+.wrapper .card{
+  width: 100%;
+}
+.small{
+    max-width: 290px;
+}
+.abm{
+    font-size: 10px;
+    width: 70%;
+}
+.titels{
+    width: 100%;
+    background: Linear-gradient(#ff54a2, #ff575a);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+}
+}
+
+
+.me{
+    margin-top: 70px;
+    margin-left: 200px;
+    width: 500px;
+    height: 500px;
+}
+.small{
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 50px;
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', cursive;
+}
+.na{
+    text-align: left;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+}
+.abm{
+    font-size: 17px;
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+#smed{
+    margin-top: -100px;
+}
+.tti{
+    font-size: 50px;
+    margin-left: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+.joml{
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: 'Comfortaa', cursive;
+}
+#sboxs{
+    margin-left: 90px;
+}
+
+/*Boxs*/
+.mail{
+    width: 400px;
+    height: 70px;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid;
+    font-family: 'Comfortaa', cursive;
+    margin-top: 50px;
+    margin-left: -50px;
+}
+.mai{
+    margin-top: 25px;
+    margin-left: 60px;
+}
+#gm{
+    margin-left: -330px;
+    margin-top: -65px;
+}
+
+.yt{
+    width: 400px;
+    height: 70px;
+    font-size: 12px;
+    text-align: center;
+    align-items: center;
+    border: 1px solid;
+    font-family: 'Comfortaa', cursive;
+    margin-top: 50px;
+    margin-left: -50px;
+}
+.ty{
+    margin-top: 25px;
+    margin-left: 60px;
+}
+#be{
+    margin-left: -320px;
+    margin-top: -65px;
+}
+
+.git{
+    width: 400px;
+    height: 70px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid;
+    font-family: 'Comfortaa', cursive;
+    margin-top: -194px;
+    margin-left: 390px;
+}
+.it{
+    margin-top: 25px;
+    margin-left: 40px;
+}
+#gi{
+    margin-left: -320px;
+    margin-top: -565px;
+}
+
+.disc{
+    width: 400px;
+    height: 70px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid;
+    font-family: 'Comfortaa', cursive;
+    margin-top: 50px;
+    margin-left: 390px;
+}
+.disco{
+    margin-top: 25px;
+    margin-left: 40px;
+}
+#co{
+    margin-left: -320px;
+    margin-top: -565px;
+}
